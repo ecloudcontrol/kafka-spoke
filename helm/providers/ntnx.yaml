@@ -1,0 +1,172 @@
+connect:
+  dependencies:
+    kafka:
+      bootstrapEndpoint: kafka:9071
+      brokerCount: 3
+    schemaRegistry:
+      enabled: true
+      url: http://schemaregistry:8081
+  loadBalancer:
+    domain: ''
+    enabled: false
+  name: connectors
+  replicas: 2
+  tls:
+    authentication:
+      type: ''
+    cacerts: ''
+    enabled: false
+    fullchain: ''
+    privkey: ''
+controlcenter:
+  auth:
+    basic:
+      enabled: true
+      property:
+        admin: Developer1,Administrators
+        disallowed: no_access
+  dependencies:
+    c3KafkaCluster:
+      bootstrapEndpoint: kafka:9071
+      brokerCount: 3
+      zookeeper:
+        endpoint: zookeeper:2181
+    connectCluster:
+      enabled: true
+      url: http://connectors:8083
+    ksql:
+      enabled: true
+      url: http://ksql:9088
+    schemaRegistry:
+      enabled: true
+      url: http://schemaregistry:8081
+  license: ''
+  loadBalancer:
+    domain: ''
+    enabled: false
+  name: controlcenter
+  tls:
+    authentication:
+      type: ''
+    cacerts: ''
+    enabled: false
+    fullchain: ''
+    privkey: ''
+global:
+  provider:
+    kubernetes:
+      deployment:
+        zones:
+        - node
+    name: private
+    registry:
+      credential:
+        required: false
+      fqdn: quincy2019-registry-common.ecloudcontrol.com
+    storage:
+      VolumeBindingMode: Immediate
+      parameters:
+        csiNodePublishSecretName: ntnx-secret-0005a32c-e64e-d10a-0000-000000013c32
+        csiNodePublishSecretNamespace: kube-system
+        csiProvisionerSecretName: ntnx-secret-0005a32c-e64e-d10a-0000-000000013c32
+        csiProvisionerSecretNamespace: kube-system
+        dataServiceEndPoint: 10.42.111.40:3260
+        description: confl-storclass
+        encrypted: 'false'
+        flashMode: DISABLED
+        fsType: xfs
+        kmsKeyId: ''
+        storageContainer: default-container-80946
+        storageType: NutanixVolumes
+        type: gp2
+      provisioner: com.nutanix.csi
+      reclaimPolicy: Delete
+  sasl:
+    plain:
+      password: test123
+      username: test
+kafka:
+  loadBalancer:
+    bootstrapPrefix: kafka
+    brokerPrefix: kafka
+    domain: appzdemo.com
+    enabled: 'True'
+    type: internal
+  metricReporter:
+    enabled: false
+  name: kafka
+  replicas: 3
+  resources:
+    requests:
+      cpu: 200m
+      memory: 1Gi
+  tls:
+    cacerts: ''
+    enabled: false
+    fullchain: ''
+    privkey: ''
+ksql:
+  dependencies:
+    kafka:
+      bootstrapEndpoint: kafka:9071
+      brokerCount: 3
+      brokerEndpoints: kafka-0.kafka:9071,kafka-1.kafka:9071,kafka-2.kafka:9071
+    schemaRegistry:
+      enabled: false
+      tls:
+        authentication:
+          type: ''
+        enabled: false
+      url: http://schemaregistry:8081
+  loadBalancer:
+    domain: ''
+    enabled: false
+  name: ksql
+  replicas: 2
+  tls:
+    authentication:
+      type: ''
+    cacerts: ''
+    enabled: false
+    fullchain: ''
+    privkey: ''
+replicator:
+  dependencies:
+    kafka:
+      bootstrapEndpoint: kafka:9071
+      brokerCount: 3
+  loadBalancer:
+    domain: ''
+    enabled: false
+  name: replicator
+  replicas: 2
+  tls:
+    authentication:
+      type: ''
+    cacerts: ''
+    enabled: false
+    fullchain: ''
+    privkey: ''
+schemaregistry:
+  dependencies:
+    kafka:
+      bootstrapEndpoint: kafka:9071
+      brokerCount: 3
+  loadBalancer:
+    domain: ''
+    enabled: false
+  name: schemaregistry
+  tls:
+    authentication:
+      type: ''
+    cacerts: ''
+    enabled: false
+    fullchain: ''
+    privkey: ''
+zookeeper:
+  name: zookeeper
+  replicas: 3
+  resources:
+    requests:
+      cpu: 200m
+      memory: 512Mi
