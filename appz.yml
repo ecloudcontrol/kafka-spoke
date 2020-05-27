@@ -37,4 +37,4 @@ properties:
   KAFKA_REPLICAS: 3
   HUB_NAMESPACE: staging-kafka-hub
   VERBOSE_LOG: false
-  revision : 12
+  revision : 13
