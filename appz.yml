@@ -31,4 +31,4 @@ properties:
   VERBOSE_LOG: false
   KAFKA_REPLICAS: 3
   APPZ_TEARDOWN_TOKEN: 20200528-0105
-  revision : 13
+  revision : 14
