@@ -22,27 +22,13 @@ monitor:
     
 properties:
   KAFKA_DEPLOYMENT_TYPE: SPOKE
-  AWS_ACCESS_KEY_ID: 
-    vault: AWS_ACCESS_KEY_ID
-  AWS_SECRET_ACCESS_KEY:
-    vault: AWS_SECRET_ACCESS_KEY
-  AWS_DEFAULT_REGION: us-east-2
   KUBECONFIG:
     vault: KUBECONFIG
-  K8S_PROVIDER: UNMANAGED
-  PROVIDER_YAML: aws.yaml
+  PROVIDER_YAML: ntnx.yaml
   NAMESPACE: staging-kafka-spoke
   COMMON_REGISTRY: quincy2019-registry-common.ecloudcontrol.com
-  EKS_REGION: us-east
-  EKS_ZONES: us-east-2b
-  DOMAIN: appzdemo.com
-  BOOTSTRAP_PREFIX: spoke
-  BROKER_PREFIX: spoke
-  LB_TYPE: internal 
-  LB_ENABLED: true
-  BROKER_ADDRESS: spoke0.appzdemo.com
-  BROKER_PORT: 31120
+  HUB_NAMESPACE: staging-kafka-hub
+  VERBOSE_LOG: false
   KAFKA_REPLICAS: 3
-  SECURITY_PROTOCOL: SASL_PLAINTEXT
-  SASL_MECHANISMS: PLAIN
+  APPZ_TEARDOWN_TOKEN: 20200528-0105
   revision : 12
