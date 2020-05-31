@@ -24,7 +24,7 @@ properties:
   KAFKA_DEPLOYMENT_TYPE: SPOKE
   KUBECONFIG:
     vault: KUBECONFIG
-  PROVIDER_YAML: ntnx.yaml
+  PROVIDER_YAML: ntnx
   NAMESPACE: staging-kafka-spoke
   COMMON_REGISTRY: quincy2019-registry-common.ecloudcontrol.com
   HUB_NAMESPACE: staging-kafka-hub
