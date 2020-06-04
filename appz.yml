@@ -29,13 +29,12 @@ properties:
   AWS_DEFAULT_REGION: us-east-2
   KUBECONFIG:
     vault: KUBECONFIG
-  PROVIDER_YAML: aws
-  NAMESPACE: staging-kafka-spoke
+  PROVIDER_YAML: aws.yaml
+  NAMESPACE: dev-kafka-spoke
   COMMON_REGISTRY: quincy2019-registry-common.ecloudcontrol.com
   EKS_REGION: us-east
   EKS_ZONES: us-east-2b
-  KAFKA_REPLICAS: 3
-  HUB_NAMESPACE: staging-kafka-hub
+  HUB_NAMESPACE: dev-kafka-hub
   VERBOSE_LOG: false
-  APPZ_TEARDOWN_TOKEN: 20200528-0105
+  APPZ_TEARDOWN_TOKEN: 20200604-2130
   revision : 13
