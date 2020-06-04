@@ -36,5 +36,5 @@ properties:
   EKS_ZONES: us-east-2b
   HUB_NAMESPACE: dev-kafka-hub
   VERBOSE_LOG: false
-  APPZ_TEARDOWN_TOKEN: 20200604-2135
+  APPZ_TEARDOWN_TOKEN: 20200604-2136
   revision : 13
