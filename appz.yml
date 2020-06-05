@@ -29,6 +29,5 @@ properties:
   COMMON_REGISTRY: quincy2019-registry-common.ecloudcontrol.com
   HUB_NAMESPACE: staging-kafka-hub
   VERBOSE_LOG: false
-  KAFKA_REPLICAS: 3
   APPZ_TEARDOWN_TOKEN: 20200528-0105
   revision : 15
