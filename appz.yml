@@ -30,11 +30,11 @@ properties:
   KUBECONFIG:
     vault: KUBECONFIG
   PROVIDER_YAML: aws
-  NAMESPACE: dev-kafka-spoke
+  NAMESPACE: staging-kafka-spoke
   COMMON_REGISTRY: quincy2019-registry-common.ecloudcontrol.com
   EKS_REGION: us-east
   EKS_ZONES: us-east-2b
-  HUB_NAMESPACE: dev-kafka-hub
+  HUB_NAMESPACE: staging-kafka-hub
   VERBOSE_LOG: false
   APPZ_TEARDOWN_TOKEN: 20200605-2245
   revision : 13
